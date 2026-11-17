@@ -3,6 +3,7 @@ const canvasElement = document.getElementById('overlay');
 const canvasCtx = canvasElement.getContext('2d');
 const btnScan = document.getElementById('btn-scan');
 const resultText = document.getElementById('face-shape-result');
+const faceFeatures = document.getElementById('face-features');
 const productList = document.getElementById('product-list');
 const cameraStatus = document.getElementById('camera-status');
 const removeButton = document.getElementById('btn-remove');
@@ -98,9 +99,8 @@ function updateSelectedCard() {
     productList.querySelectorAll('.product-card').forEach(card => {
         const active = Number(card.dataset.glassId) === selectedGlass?.id;
         card.classList.toggle('selected', active);
-        const button = card.querySelector('button');
-        button.textContent = active ? 'Đang thử' : 'Thử kính (AR)';
-        button.setAttribute('aria-pressed', String(active));
+        card.setAttribute('aria-pressed', String(active));
+        card.querySelector('.product-state').hidden = !active;
     });
     removeButton.hidden = !selectedGlass;
     faceGuide.hidden = Boolean(selectedGlass);
@@ -376,6 +376,14 @@ btnScan.addEventListener('click', () => {
 
     // d. Cập nhật UI
     resultText.innerText = `Mặt ${predictedShape}`;
+    faceFeatures.querySelectorAll('[data-feature]').forEach(value => {
+        const index = Number(value.dataset.feature);
+        value.textContent = index === 4 ? `${features[index].toFixed(1)}°` : features[index].toFixed(2);
+    });
+    faceFeatures.querySelectorAll('[data-meter]').forEach(meter => {
+        meter.value = Math.min(features[Number(meter.dataset.meter)], Number(meter.max));
+    });
+    faceFeatures.hidden = false;
     btnScan.innerText = "Quét lại";
     btnScan.disabled = false;
     cameraStatus.textContent = `Đã quét mặt ${predictedShape}. Chọn kính để thử.`;
@@ -391,22 +399,24 @@ btnScan.addEventListener('click', () => {
     }
 
     matchingGlasses.forEach(glass => {
-        const card = document.createElement('div');
+        const card = document.createElement('button');
+        card.type = 'button';
         card.className = 'product-card';
         card.dataset.glassId = glass.id;
+        card.setAttribute('aria-pressed', 'false');
         card.innerHTML = `
-            <div class="product-image">
-                <img src="${glass.image}" alt="${glass.name}" style="width:100%; height:100%; object-fit:contain;">
-            </div>
-            <div class="product-info">
-                <h4>${glass.name}</h4>
-                <p>${glass.reason}</p>
-                <span class="price">${glass.price}</span><br>
-                <button class="cta-btn secondary" type="button" aria-pressed="false">Thử kính (AR)</button>
-            </div>
+            <span class="product-image">
+                <img src="${glass.image}" alt="" style="width:100%; height:100%; object-fit:contain;">
+            </span>
+            <span class="product-info">
+                <span class="product-title">${glass.name}</span>
+                <span class="product-reason">${glass.reason}</span>
+                <span class="product-state" hidden>Đang thử</span>
+            </span>
         `;
-        card.querySelector('button').addEventListener('click', () => selectGlass(glass));
+        card.addEventListener('click', () => selectGlass(glass));
         productList.appendChild(card);
     });
+    productList.scrollTop = 0;
     updateSelectedCard();
 });

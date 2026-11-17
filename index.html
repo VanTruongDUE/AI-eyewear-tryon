@@ -13,7 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="app-container">
+    <main class="app-container">
+        <header class="app-header">
+            <h1>AI Eyewear Try-On</h1>
+            <p>Khám phá dáng mặt và thử kính phù hợp với bạn</p>
+        </header>
         <!-- Cột trái: Khung Camera -->
         <div class="camera-section">
             <div class="video-wrapper">
@@ -28,7 +32,7 @@
                 <button id="btn-remove" class="cta-btn secondary" hidden>Bỏ kính</button>
                 <label><input id="show-mesh" type="checkbox"> Hiện lưới mặt</label>
             </div>
-            <details id="calibration">
+            <details id="calibration" open>
                 <summary>Hiệu chỉnh kính (kỹ thuật)</summary>
                 <div id="anchor-preview"></div>
                 <p id="calibration-name">Chọn mẫu kính để hiệu chỉnh.</p>
@@ -47,21 +51,33 @@
 
         <!-- Cột phải: Kết quả & Gợi ý (Khu vực E-commerce) -->
         <div class="result-section">
-            <h2>Kết quả Phân tích AI</h2>
-            <div class="status-box">
-                <p>Dáng mặt của bạn:</p>
-                <h3 id="face-shape-result">Chưa quét</h3>
+            <div class="analysis-panel">
+                <h2>Phân tích khuôn mặt</h2>
+                <section id="face-features" class="face-features" hidden>
+                    <h3>Đặc trưng khuôn mặt</h3>
+                    <p class="face-features-description">Các tỷ lệ được đo từ những điểm mốc trên khuôn mặt.</p>
+                    <dl>
+                        <div><dt>Tỷ lệ dài mặt / rộng gò má</dt><dd><span data-feature="0"></span><meter data-meter="0" min="0" max="2" value="0" aria-label="Tỷ lệ dài mặt / rộng gò má"></meter></dd></div>
+                        <div><dt>Tỷ lệ trán / gò má</dt><dd><span data-feature="1"></span><meter data-meter="1" min="0" max="1" value="0" aria-label="Tỷ lệ trán / gò má"></meter></dd></div>
+                        <div><dt>Tỷ lệ hàm / gò má</dt><dd><span data-feature="2"></span><meter data-meter="2" min="0" max="1" value="0" aria-label="Tỷ lệ hàm / gò má"></meter></dd></div>
+                        <div><dt>Góc cằm</dt><dd><span data-feature="4"></span><meter data-meter="4" min="0" max="180" value="0" aria-label="Góc cằm"></meter></dd></div>
+                    </dl>
+                </section>
+                <div class="status-box">
+                    <p>Dáng mặt của bạn</p>
+                    <h3 id="face-shape-result">Chưa quét</h3>
+                </div>
             </div>
             
             <div class="recommendation-area">
                 <h3>Kính mắt gợi ý cho bạn</h3>
                 <div id="product-list" class="product-list">
                     <!-- Các card sản phẩm sẽ được JS đẩy vào đây -->
-                    <p style="color: gray; text-align: center;">Vui lòng đưa mặt vào khung và bấm Quét</p>
+                    <p class="empty-state">Đưa khuôn mặt vào khung camera rồi bấm “Quét khuôn mặt” để xem gợi ý.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     
     <!-- NHÚNG CÁC FILE JS -->
     <script src="data.js"></script>

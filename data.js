@@ -9,7 +9,7 @@ const realGlassesData =[
       "square",
       "oblong"
     ],
-    "reason": "Gọng tròn giúp làm mềm các đường nét góc cạnh của khuôn mặt.",
+    "reason": "Gọng tròn làm mềm các đường nét góc cạnh và tạo đối trọng với khuôn mặt dài. Viền kính rõ vừa đủ để đôi mắt nổi bật mà tổng thể vẫn nhẹ nhàng.",
     "price": 450000,
     "currency": "VND"
   },
@@ -23,7 +23,7 @@ const realGlassesData =[
       "square",
       "oblong"
     ],
-    "reason": "Thiết kế bo tròn tạo cảm giác cân đối và mềm mại hơn.",
+    "reason": "Dáng tròn kết hợp viền kim loại mảnh tạo cảm giác mềm mại mà không che nhiều khuôn mặt. Kiểu gọng này hợp khi bạn muốn một điểm nhấn tinh tế, dễ dùng hằng ngày.",
     "price": 520000,
     "currency": "VND"
   },
@@ -38,7 +38,7 @@ const realGlassesData =[
       "oblong",
       "heart"
     ],
-    "reason": "Dáng panto bo cong nhẹ, tạo điểm nhấn mà không làm gương mặt quá góc cạnh.",
+    "reason": "Dáng panto có phần viền bo cong, giúp làm dịu những đường nét cứng và thu hút ánh nhìn vào vùng mắt. Tỷ lệ gọng vừa phải tạo vẻ cổ điển nhưng không quá nặng mặt.",
     "price": 590000,
     "currency": "VND"
   },
@@ -52,7 +52,7 @@ const realGlassesData =[
       "square",
       "oblong"
     ],
-    "reason": "Gọng kim loại mảnh giúp tổng thể trông nhẹ nhàng.",
+    "reason": "Viền tròn mảnh giữ cho đường nét khuôn mặt hiện rõ, đồng thời làm mềm cảm giác góc cạnh. Thiết kế gọn gàng phù hợp với người thích kính ít nổi bật.",
     "price": 480000,
     "currency": "VND"
   },
@@ -66,7 +66,7 @@ const realGlassesData =[
       "round",
       "oval"
     ],
-    "reason": "Đường gọng ngang và góc rõ giúp tạo nét định hình cho khuôn mặt.",
+    "reason": "Dáng chữ nhật nhấn vào đường ngang và các góc gọng, giúp khuôn mặt tròn trông có cấu trúc hơn. Viền kính gọn tạo phong cách chỉn chu, dễ kết hợp trang phục thường ngày.",
     "price": 460000,
     "currency": "VND"
   },
@@ -80,7 +80,7 @@ const realGlassesData =[
       "round",
       "oval"
     ],
-    "reason": "Gọng vuông tạo thêm đường nét và độ tương phản cho gương mặt.",
+    "reason": "Các cạnh vuông tạo độ tương phản với đường cong tự nhiên của khuôn mặt. Dáng kính rõ nét giúp vùng mắt trông sắc sảo hơn mà vẫn giữ tổng thể cân đối.",
     "price": 510000,
     "currency": "VND"
   },
@@ -94,7 +94,7 @@ const realGlassesData =[
       "round",
       "oval"
     ],
-    "reason": "Phần trên gọng rõ nét giúp tăng cảm giác góc cạnh.",
+    "reason": "Đường viền phía trên tạo điểm nhấn mạnh cho vùng mắt và bổ sung góc cạnh cho khuôn mặt tròn. Dáng wayfarer mang cảm giác năng động, nổi bật hơn các mẫu gọng mảnh.",
     "price": 620000,
     "currency": "VND"
   },
@@ -108,7 +108,7 @@ const realGlassesData =[
       "round",
       "oval"
     ],
-    "reason": "Thiết kế hình học tạo điểm nhấn và cân bằng đường nét mềm.",
+    "reason": "Các cạnh hình học tạo một điểm nhấn khác biệt ở vùng mắt, cân bằng những đường nét mềm của khuôn mặt. Kiểu dáng này hợp khi bạn muốn chiếc kính trở thành điểm nhấn chính.",
     "price": 650000,
     "currency": "VND"
   },
@@ -122,7 +122,7 @@ const realGlassesData =[
       "heart",
       "oval"
     ],
-    "reason": "Dáng phi công có phần dưới bo rộng, giúp tạo cảm giác cân bằng tổng thể.",
+    "reason": "Dáng phi công mở rộng nhẹ về phía dưới, giúp cân bằng vùng trán và gò má. Đường cong mềm tạo cảm giác phóng khoáng mà không làm phần trên khuôn mặt quá nặng.",
     "price": 550000,
     "currency": "VND"
   },
@@ -137,7 +137,7 @@ const realGlassesData =[
       "oval",
       "oblong"
     ],
-    "reason": "Dáng kính cong nhẹ giúp tổng thể hài hòa và không quá nặng phần trán.",
+    "reason": "Đường cong của gọng làm dịu vùng trán và dẫn ánh nhìn xuống giữa khuôn mặt. So với dáng phi công góc cạnh, mẫu này cho cảm giác mềm và dễ đeo hơn.",
     "price": 610000,
     "currency": "VND"
   },
@@ -151,7 +151,7 @@ const realGlassesData =[
       "heart",
       "oval"
     ],
-    "reason": "Phần đuôi kính nâng nhẹ tạo điểm nhấn ở vùng mắt.",
+    "reason": "Đuôi kính nâng nhẹ hướng ánh nhìn lên vùng mắt và tạo nét thanh thoát cho gương mặt. Dáng cat eye cổ điển hợp với người thích một điểm nhấn rõ nhưng vẫn mềm mại.",
     "price": 570000,
     "currency": "VND"
   },
@@ -166,7 +166,7 @@ const realGlassesData =[
       "oval",
       "round"
     ],
-    "reason": "Đường gọng hơi xếch giúp tăng nét sắc sảo cho khuôn mặt.",
+    "reason": "Phần đuôi hơi xếch tạo nét sắc sảo vừa phải mà không làm tổng thể quá mạnh. Kiểu dáng này thêm đường nét cho khuôn mặt tròn và giữ vùng mắt nổi bật.",
     "price": 630000,
     "currency": "VND"
   },
@@ -180,7 +180,7 @@ const realGlassesData =[
       "oval",
       "oblong"
     ],
-    "reason": "Phần viền trên đậm tạo điểm nhấn và giúp gương mặt trông cân đối.",
+    "reason": "Viền trên rõ hơn phần dưới giúp tập trung ánh nhìn vào đôi mắt. Dáng browline tạo cảm giác gọn gàng, đồng thời thêm điểm nhấn cho khuôn mặt dài.",
     "price": 680000,
     "currency": "VND"
   },
@@ -194,7 +194,7 @@ const realGlassesData =[
       "round",
       "oval"
     ],
-    "reason": "Gọng bản lớn và góc rõ tạo cấu trúc nổi bật cho gương mặt.",
+    "reason": "Kích thước gọng lớn và các góc vuông tạo đường nét rõ cho khuôn mặt tròn. Mẫu này phù hợp khi bạn thích vẻ nổi bật và muốn kính giữ vai trò chính trong tổng thể.",
     "price": 720000,
     "currency": "VND"
   },
@@ -208,7 +208,7 @@ const realGlassesData =[
       "square",
       "oblong"
     ],
-    "reason": "Đường cong oval giúp làm dịu các góc cạnh.",
+    "reason": "Đường cong oval làm dịu các góc hàm và tạo cảm giác mềm mại quanh mắt. Viền mảnh giúp kính trông nhẹ, không che khuất quá nhiều đường nét tự nhiên.",
     "price": 500000,
     "currency": "VND"
   },
@@ -223,7 +223,7 @@ const realGlassesData =[
       "heart",
       "oval"
     ],
-    "reason": "Góc bo nhẹ kết hợp đường ngang giúp tạo sự cân bằng.",
+    "reason": "Khung chữ nhật với góc bo nhẹ kết hợp sự rõ nét và mềm mại. Đường ngang giúp định hình vùng mắt, còn góc bo giữ cho tổng thể không quá cứng.",
     "price": 540000,
     "currency": "VND"
   },
@@ -238,7 +238,7 @@ const realGlassesData =[
       "oval",
       "oblong"
     ],
-    "reason": "Gọng mảnh, dáng ngang đơn giản tạo cảm giác thanh thoát.",
+    "reason": "Viền kim loại mảnh cùng dáng ngang giữ khuôn mặt thoáng và gọn. Mẫu này thêm đường nét cho vùng mắt mà không tạo cảm giác nặng như gọng bản lớn.",
     "price": 490000,
     "currency": "VND"
   },
@@ -252,7 +252,7 @@ const realGlassesData =[
       "heart",
       "oval"
     ],
-    "reason": "Dáng cánh bướm mở rộng nhẹ ở phía trên, tạo điểm nhấn cho vùng mắt.",
+    "reason": "Phần gọng mở rộng như cánh bướm tạo điểm nhấn ở đuôi mắt và làm khuôn mặt trông thanh thoát. Dáng kính mềm, nổi bật hơn gọng oval thông thường.",
     "price": 690000,
     "currency": "VND"
   },
@@ -266,7 +266,7 @@ const realGlassesData =[
       "round",
       "oval"
     ],
-    "reason": "Gọng chữ nhật tạo đường nét rõ, giúp gương mặt trông gọn và có cấu trúc.",
+    "reason": "Khung chữ nhật hẹp nhấn mạnh đường ngang của vùng mắt, giúp khuôn mặt tròn trông gọn hơn. Thiết kế nhỏ gọn thích hợp khi bạn muốn vẻ ngoài sắc nét nhưng kín đáo.",
     "price": 430000,
     "currency": "VND"
   },
@@ -281,7 +281,7 @@ const realGlassesData =[
       "oblong",
       "oval"
     ],
-    "reason": "Dáng bo cong vừa phải giúp tổng thể hài hòa, dễ phối hợp.",
+    "reason": "Dáng panto bo cong vừa phải làm mềm các góc cạnh mà vẫn giữ nét gọn gàng. Tỷ lệ viền cân đối giúp mẫu kính dễ kết hợp với nhiều phong cách thường ngày.",
     "price": 580000,
     "currency": "VND"
   }
