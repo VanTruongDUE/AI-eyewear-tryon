@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Eyewear Try-On</title>
+    <!-- Nhúng Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- NHÚNG THƯ VIỆN MEDIAPIPE -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Cột trái: Khung Camera -->
+        <div class="camera-section">
+            <div class="video-wrapper">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="overlay"></canvas>
+                <!-- Khung Oval mờ hướng dẫn người dùng đặt mặt vào -->
+                <div class="face-guide"></div>
+            </div>
+            <button id="btn-scan" class="cta-btn primary">Quét khuôn mặt</button>
+        </div>
+
+        <!-- Cột phải: Kết quả & Gợi ý (Khu vực E-commerce) -->
+        <div class="result-section">
+            <h2>Kết quả Phân tích AI</h2>
+            <div class="status-box">
+                <p>Dáng mặt của bạn:</p>
+                <h3 id="face-shape-result">Chưa quét</h3>
+            </div>
+            
+            <div class="recommendation-area">
+                <h3>Kính mắt gợi ý cho bạn</h3>
+                <div id="product-list" class="product-list">
+                    <!-- Các card sản phẩm sẽ được JS đẩy vào đây -->
+                    <p style="color: gray; text-align: center;">Vui lòng đưa mặt vào khung và bấm Quét</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- NHÚNG CÁC FILE JS -->
+    <script src="data.js"></script>
+    <script src="model.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
